@@ -1,6 +1,30 @@
 const request = require('supertest');
 const server = require('../api/server');
 
+describe('server', function () {
+    it('runs tests', function () {
+        expect(true).toBe(true)
+    })
+
+    describe('GET /', function () {
+        it('status 200 on success', function () {
+            return request(server)
+                .get('/')
+                .then(res => {
+                    expect(res.status).toBe(200)
+                })
+        })
+
+        it('should return server is running', function () {
+            return request(server)
+                .get('/')
+                .then(res => {
+                    expect(res.text).toEqual('Server is running')
+                })
+        })
+    })
+})
+
 describe('auth router', function () {
     it('tests are running', function () {
         expect(true).toBe(true);
@@ -11,7 +35,7 @@ describe('auth router', function () {
     //         return request(server)
     //             .post('/api/auth/register')
     //             .send({
-    //                 username: 'Test',
+    //                 username: 'Lambda',
     //                 password: 'lambda'
     //             })
     //             .then(res => {
