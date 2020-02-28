@@ -23,8 +23,8 @@ const JokesList = props => {
     }
 
     return (
-        <div className='usersList'>
-            <Button className='logoutBtn' onClick={logout}>Sign Out</Button>
+        <div className='jokesList'>
+            <Button color='danger' className='logoutBtn' onClick={logout}>Sign Out</Button>
             {jokes.map(joke => (
                 <JokeCard
                  key={joke.id}

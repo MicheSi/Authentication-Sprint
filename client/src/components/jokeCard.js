@@ -6,14 +6,13 @@ import {
 
 const JokeCard = props => {
     return (
-        <div className='userCard'>
-            <Card>
-                <CardBody>
+        <div>
+            <Card className='joke'>
+                <CardBody className='jokeCard'>
                     <CardTitle>Joke ID: {props.id}</CardTitle>
                     <CardText>{props.joke}</CardText>
                 </CardBody>
-      </Card>
-
+            </Card>
         </div>
 
     )

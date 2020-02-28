@@ -38,6 +38,7 @@ const Register = props => {
                 <FormGroup>
                     <Label for="username">Username</Label>
                     <Input
+                     required
                      type="text"
                      name="username"
                      id="username"
@@ -49,6 +50,7 @@ const Register = props => {
                 <FormGroup>
                     <Label for="password">Password</Label>
                     <Input
+                     required
                      type="password"
                      name="password"
                      id="password"
@@ -57,7 +59,7 @@ const Register = props => {
                      value={user.password}
                      />
                 </FormGroup>
-                <Button type='submit'>Register</Button>
+                <Button type='submit' color='info'>Register</Button>
             </Form>
         </div>
     )
