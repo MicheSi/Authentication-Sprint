@@ -6,6 +6,20 @@ describe('auth router', function () {
         expect(true).toBe(true);
     });
 
+    // describe('POST /api/auth/register', function () {
+    //     it('201 status on succesful add', function () {
+    //         return request(server)
+    //             .post('/api/auth/register')
+    //             .send({
+    //                 username: 'Test',
+    //                 password: 'lambda'
+    //             })
+    //             .then(res => {
+    //                 expect(res.status).toBe(201);
+    //             })
+    //     })
+    // })
+
     describe('POST /api/auth/login', function () {
         it('returns JSON on successful login', function () {
             return request(server)
@@ -32,17 +46,4 @@ describe('auth router', function () {
         })
     })
 
-    // describe('POST /api/auth/register', function () {
-    //     it('201 status on succesful add', function () {
-    //         return request(server)
-    //             .post('/api/auth/register')
-    //             .send({
-    //                 username: 'Test',
-    //                 password: 'lambda'
-    //             })
-    //             .then(res => {
-    //                 expect(res.status).toBe(201);
-    //             })
-    //     })
-    // })
 })
